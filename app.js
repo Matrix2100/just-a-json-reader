@@ -8,7 +8,7 @@ app.listen(port);
 
 app.post('/api/', function (req, res) {
     // print to console
-    console.log(util.inspect(myObject, {showHidden: false, depth: null, colors: true}))
+    console.log(JSON.stringify(util.inspect(myObject, {showHidden: false, depth: null, colors: true})))
 
     // just call res.end(), or show as string on web
     res.send(req.body);
