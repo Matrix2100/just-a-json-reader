@@ -14,7 +14,7 @@ app.post('/api/', function (req, res) {
 });
 
 function printJsonRecusively(obj){
-    let body = '';
+    let body = 'e';
     printJsonRecusively(obj, body);
     console.log(body);
 }
