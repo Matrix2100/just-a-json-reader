@@ -18,7 +18,7 @@ app.post('/api/', function (req, res) {
 
 function printJsonRecusively(obj) {
     var text = printJsonRecusively2(obj, '')
-    console.log(text)
+    console.log("request: "+text)
     console.log(" \n")
 }
 
@@ -26,11 +26,11 @@ function printJsonRecusively2(obj, text) {
     for (var key in obj) {
         if (obj.hasOwnProperty(key)) {
             if (typeof obj[key] == "object") {
-                text +=  key + "-> "
+                text +=  key + "- > "
                 // console.log(key)
                 text = printJsonRecusively2(obj[key], text)
             } else {
-                text += "\n" + key + "-> " + obj[key] + ", "
+                text += "\n" + key + "- > " + obj[key] + ", "
                 // console.log(key + " -> " + obj[key])
             }
         }
