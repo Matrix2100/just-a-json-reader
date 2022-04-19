@@ -26,7 +26,7 @@ function printJsonRecusively2(obj, text) {
     for (var key in obj) {
         if (obj.hasOwnProperty(key)) {
             if (typeof obj[key] == "object") {
-                text +=  key + ": "
+                text +=  key + "-> "
                 // console.log(key)
                 text = printJsonRecusively2(obj[key], text)
             } else {
