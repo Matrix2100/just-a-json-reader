@@ -30,7 +30,7 @@ function printJsonRecusively2(obj, text) {
                 // console.log(key)
                 text = printJsonRecusively2(obj[key], text)
             } else {
-                text += "\n" + key + ": " + obj[key] + ", "
+                text += "\n" + key + "-> " + obj[key] + ", "
                 // console.log(key + " -> " + obj[key])
             }
         }
